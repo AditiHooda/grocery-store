@@ -8,20 +8,29 @@ class Products extends Component {
             const productview =
                 <Card>
                     <div>
-                        {product.discount != "0%" ? <span className="badge badge-danger"> Discount -{product.discount}</span> : <span className="badge badge-success">New Arrival</span>}
+                        {product.discount != "0%" ? <h4><span className="badge badge-danger badge-lg"> Discount -{product.discount}</span></h4> : <h4><span className="badge badge-success">New Arrival</span></h4>}
                         <CardImg src={product.image} height="280px">
                         </CardImg>
                     </div>
-                    <CardBody>
-                        <CardTitle>
-                            {product.name}
-                        </CardTitle>
+                    <CardTitle className='text-center'>
+                        {product.name}
+                    </CardTitle>
+                    <CardBody className='text-center productBody'>
                         <CardText>
                             <div>
-                                {product.discountedPrice} {product.discountedPrice != product.price ? <small className="lineThrough"> {product.price} </small> : null}
-                                <div class="quantity">
+                                MRP. {product.discountedPrice != product.price ? <small className="lineThrough"> {product.price} </small> : null} {product.discountedPrice}
+                                <div>
+                                    <span style={{
+                                        backgroundImage: 'url(assets/images/deliveryTruck.svg)',
+                                        width: '30px',
+                                        height: '25px',
+                                        backgroundSize: '30px',
+                                        backgroundRepeat: 'no-repeat'
+                                    }}>&emsp;&emsp;<small>Standard Delivery: Today 6:30PM - 8:30PM</small></span>
+                                </div>
+                                <div class="m-1">
                                     <span>quantity: </span>
-                                    <input type="number" min="1" max="1000" value="1" />
+                                    <input type="number" min="1" max="100" value="1" />
                                     <span> /kg </span>
                                 </div>
                                 <button type="button" className="btn btn-success m-1">Add to Cart</button>

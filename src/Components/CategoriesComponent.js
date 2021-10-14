@@ -7,15 +7,15 @@ class CategoriesComp extends Component {
             const categories = this.props.categories.map((category) => {
                 const categoryView =
                     <Card>
-                        <CardTitle>
-                            {category.name}
+                        <CardTitle className='text-center my-2'>
+                            <h3>{category.name}</h3>
                         </CardTitle>
-                        <CardText>
+                        <CardText className='text-center my-2'>
                             {category.desc}
                         </CardText>
                         <CardImg src={category.img} height="150px">
                         </CardImg>
-                        <CardBody>
+                        <CardBody className='text-center my-2'>
                             <button type='button' className='btn btn-success'>Shop Now</button>
                         </CardBody>
                     </Card>

@@ -42,7 +42,7 @@ address{
 // }
 
 .lineThrough{
-  color:#999;
+  color:rgb(88, 86, 86);
   text-decoration: line-through;
 }
 
@@ -63,4 +63,8 @@ address{
     transform:scale(1.2) rotate(-5deg);
     object-fit: cover;
   }
+}
+
+.productBody{
+    background-color: rgb(231, 236, 231);
 }
