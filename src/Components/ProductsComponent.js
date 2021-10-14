@@ -34,7 +34,7 @@ class Products extends Component {
                     {productview}
                 </div>
             );
-        })
+        });
         return (
             <div class="box-container">
                 <div className="container">

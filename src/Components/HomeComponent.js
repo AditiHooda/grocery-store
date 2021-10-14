@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CarouselComp from "./carouselComponent";
+import CategoriesComp from "./CategoriesComponent";
 import Deals from "./DealsComponent";
 
 class Home extends Component {
@@ -8,6 +9,7 @@ class Home extends Component {
             <div>
                 <CarouselComp />
                 <Deals deals={this.props.deals} />
+                <CategoriesComp categories={this.props.categories} />
             </div>
         )
     }

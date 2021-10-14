@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardBody, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
+import { Card, CardBody, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap";
 
 class Deals extends Component {
     render() {
@@ -14,6 +14,9 @@ class Deals extends Component {
                         <CardBody>
                             {deal.desc}
                         </CardBody>
+                        <CardText>
+                            <button type='button' className='btn btn-success'>Shop Now</button>
+                        </CardText>
                     </CardImgOverlay>
                 </Card>
             return (
