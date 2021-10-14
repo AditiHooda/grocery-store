@@ -23,60 +23,33 @@ class Header extends Component {
             <>
                 <Navbar dark expand="md" className="nav">
                     <div className="container">
-                        <NavbarToggler onClick={this.toggleNav} />
-
-                        <Collapse isOpen={this.state.isNavOpen} navbar>
-                            <Nav navbar>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/home">
-                                        <span>Home</span>
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/category">
-                                        <span>Category</span>
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/products">
-                                        <span>Products</span>
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/deal">
-                                        <span>Deal</span>
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/contactus">
-                                        <span>Conatct Us</span>
-                                    </NavLink>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
-                        <NavbarBrand className="mr-auto text-center" href="/home">
-                            <img src="assets/images/logo.png" height='30' width='41'
-                                alt="Groco" />
-                        </NavbarBrand>
                         <Nav navbar>
-
+                            <NavbarBrand className="mr-auto text-center" href="/home">
+                                <h1>Groco</h1>
+                                {/* <img src="assets/images/logo.png" height='30' width='41'
+                                alt="Groco" /> */}
+                            </NavbarBrand>
                             <NavItem>
-                                <NavLink className="nav-link" to="/contactus">
-                                    <span className="fa fa-search fa-lg"></span>
-                                </NavLink>
+                                <div className="btn-group search">
+                                    <input type="text" placeholder="Search for products" className="searchinput" />
+                                    <NavLink className="nav-link" to="/products">
+                                        <span className="fa fa-search fa-lg"></span>
+                                    </NavLink>
+                                </div>
                             </NavItem>
+                        </Nav>
+                        <Nav navbar>
                             <NavItem>
-                                <NavLink className="nav-link" to="/contactus">
-                                    <span className="fa fa-shopping-cart fa-lg"></span>
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/contactus">
+                                <NavLink className="nav-link" to="/profile">
                                     <span className="fa fa-user fa-lg"></span>
                                 </NavLink>
                             </NavItem>
+                            <NavItem>
+                                <NavLink className="nav-link" to="/cart">
+                                    <span className="fa fa-shopping-cart fa-lg">My Basket</span>
+                                </NavLink>
+                            </NavItem>
                         </Nav>
-
                     </div>
                 </Navbar>
             </>

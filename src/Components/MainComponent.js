@@ -2,15 +2,19 @@ import { Component } from 'react';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { PRODUCTS } from '../assets/data/products';
 import Products from './ProductsComponent';
-
+import CarouselComp from './carouselComponent';
+import { PRODUCTS } from '../shared/products';
+import Home from './HomeComponent';
+import { DEALS } from '../shared/deals';
+import Deals from './DealsComponent';
 
 class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            products: PRODUCTS
+            products: PRODUCTS,
+            deals: DEALS
         }
     }
 
@@ -26,7 +30,7 @@ class Main extends Component {
                 <Header />
                 <Switch>
                     <Route path="/products" component={ProductsPage} />
-                    {/* <Route exact path="/menu" component={() => <Menu dishes={this.state.dishes} />} /> */}
+                    <Route exact path="/home" component={() => <Home deals={this.state.deals} />} />
                 </Switch>
                 <Footer />
             </div>

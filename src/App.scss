@@ -49,3 +49,18 @@ address{
 .inline{
     display: inline-block !important;
 }
+
+.search{
+    background-color: rgb(5, 112, 28);
+    border-radius: 10px;
+}
+.searchinput{
+    border-radius: 10px;
+}
+
+.zoomOnFocus{
+  :hover{
+    transform:scale(1.2) rotate(-5deg);
+    object-fit: cover;
+  }
+}

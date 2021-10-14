@@ -2,22 +2,23 @@ import React, { Component } from "react";
 import { Card, CardBody, CardHeader, CardImg, CardText, CardTitle } from "reactstrap";
 
 class Products extends Component {
+
     render() {
-        var colnumber = 0;
         const products = this.props.products.map((product) => {
-            colnumber++;
             const productview =
                 <Card>
-                    <CardImg>
-                        {/* <img src={require("../assets/images/product-1.png")} alt="Product1" /> */}
-                    </CardImg>
+                    <div>
+                        {product.discount != "0%" ? <span className="badge badge-danger"> Discount -{product.discount}</span> : <span className="badge badge-success">New Arrival</span>}
+                        <CardImg src={product.image} height="280px">
+                        </CardImg>
+                    </div>
                     <CardBody>
                         <CardTitle>
                             {product.name}
                         </CardTitle>
                         <CardText>
                             <div>
-                                {product.discountedPrice}  <small className="lineThrough"> {product.price} </small>
+                                {product.discountedPrice} {product.discountedPrice != product.price ? <small className="lineThrough"> {product.price} </small> : null}
                                 <div class="quantity">
                                     <span>quantity: </span>
                                     <input type="number" min="1" max="1000" value="1" />
