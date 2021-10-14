@@ -28,6 +28,11 @@ class CategoriesComp extends Component {
             return (
                 <div class="box-container">
                     <div className="container">
+                        <div className='row'>
+                            <div className='offset-2 offset-md-4'>
+                                <h2>SHOP BY <span className="text-success">CATEGORY</span></h2>
+                            </div>
+                        </div>
                         <div className="row">
                             {categories}
                         </div>

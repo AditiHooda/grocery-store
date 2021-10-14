@@ -36,11 +36,9 @@ class Products extends Component {
             );
         });
         return (
-            <div class="box-container">
-                <div className="container">
-                    <div className="row">
-                        {products}
-                    </div>
+            <div className="container my-4">
+                <div className="row">
+                    {products}
                 </div>
             </div >
         );

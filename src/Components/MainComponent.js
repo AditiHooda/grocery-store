@@ -30,7 +30,7 @@ class Main extends Component {
                 <Header />
                 <Switch>
                     <Route path="/products" component={ProductsPage} />
-                    <Route exact path="/home" component={() => <Home deals={this.state.deals} categories={this.state.categories} />} />
+                    <Route exact path="/home" component={() => <Home deals={this.state.deals} categories={this.state.categories} products={this.state.products} />} />
                 </Switch>
                 <Footer />
             </div>
