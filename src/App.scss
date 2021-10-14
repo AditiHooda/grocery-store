@@ -1,6 +1,7 @@
-$siteBackground: #9cdb98;
-$headerBackground:#28a745;
-$footerBackground:#80ad7e;
+$siteBackground: #ffff;
+// $headerBackground:#28a745;
+$headerBackground:#84C225;
+$footerBackground:#bce97a;
 .row-header{
     margin:0px auto;
     padding:0px auto;
@@ -51,7 +52,7 @@ address{
 }
 
 .search{
-    background-color: rgb(5, 112, 28);
+    background-color: #4c7015;
     border-radius: 10px;
 }
 .searchinput{
@@ -67,4 +68,17 @@ address{
 
 .productBody{
     background-color: rgb(231, 236, 231);
+    
+}
+
+.body{
+    background-color: $siteBackground;
+}
+
+.btn-green{
+
+    background: $headerBackground;
+}
+.borderOnHover:hover{
+border-color: $headerBackground;
 }

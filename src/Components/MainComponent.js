@@ -8,6 +8,7 @@ import Home from './HomeComponent';
 import { DEALS } from '../shared/deals';
 import { CATEGORIES } from '../shared/categories';
 import Contactus from './ContactusComponent';
+import Cart from './CartComponent';
 
 class Main extends Component {
     constructor(props) {
@@ -26,13 +27,19 @@ class Main extends Component {
                 <Products products={this.state.products} />
             )
         }
+        const CartPage = () => {
+            return (
+                <Cart cartproduct={this.state.products} />
+            )
+        }
         return (
-            <div className="App">
+            <div className="body">
                 <Header />
                 <Switch>
                     <Route path="/products" component={ProductsPage} />
                     <Route exact path="/home" component={() => <Home deals={this.state.deals} categories={this.state.categories} products={this.state.products} />} />
                     <Route path='/contactus' component={() => <Contactus />} />
+                    <Route path='/cart' component={CartPage} />
                 </Switch>
                 <Footer />
             </div>

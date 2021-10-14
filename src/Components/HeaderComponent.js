@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
@@ -7,6 +7,7 @@ class Header extends Component {
         super(props);
         this.state = {
             isNavOpen: false,
+            searchText: null
         }
         this.toggleNav = this.toggleNav.bind(this);
     }
@@ -14,6 +15,14 @@ class Header extends Component {
     toggleNav() {
         this.setState({
             isNavOpen: !this.state.isNavOpen
+        })
+    }
+
+    onClick() {
+        let searchInput = document.getElementById('searchInput');
+        let searchText = searchInput.value;
+        this.setState({
+            searchText: searchText
         })
     }
 
@@ -29,11 +38,11 @@ class Header extends Component {
                                 {/* <img src="assets/images/logo.png" height='30' width='41'
                                 alt="Groco" /> */}
                             </NavbarBrand>
-                            <NavItem>
+                            <NavItem className='d-flex p-3'>
                                 <div className="btn-group search">
-                                    <input type="text" placeholder="Search for products" className="searchinput" />
+                                    <input type="text" placeholder="Search for products" className="searchinput" id='searchInput' />
                                     <NavLink className="nav-link" to="/products">
-                                        <span className="fa fa-search fa-lg"></span>
+                                        <span className="fa fa-search fa-lg" onClick={() => this.onClick()}></span>
                                     </NavLink>
                                 </div>
                             </NavItem>
