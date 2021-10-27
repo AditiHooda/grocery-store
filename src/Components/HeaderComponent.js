@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 class Header extends Component {
     constructor(props) {
@@ -18,7 +18,7 @@ class Header extends Component {
         })
     }
 
-    onClick() {
+    onChange() {
         let searchInput = document.getElementById('searchInput');
         let searchText = searchInput.value;
         this.setState({
@@ -40,10 +40,8 @@ class Header extends Component {
                             </NavbarBrand>
                             <NavItem className='d-flex p-3'>
                                 <div className="btn-group search">
-                                    <input type="text" placeholder="Search for products" className="searchinput" id='searchInput' />
-                                    <NavLink className="nav-link" to="/products">
-                                        <span className="fa fa-search fa-lg" onClick={() => this.onClick()}></span>
-                                    </NavLink>
+                                    <input type="text" placeholder="Search for products" className="searchinput" id='searchInput' onChange={() => this.onChange()} />
+                                    <Link to={`/products/${this.state.searchText}`}><span className="fa fa-search fa-lg"></span></Link>
                                 </div>
                             </NavItem>
                         </Nav>

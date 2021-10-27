@@ -16,27 +16,42 @@ class Main extends Component {
         this.state = {
             products: PRODUCTS,
             deals: DEALS,
-            categories: CATEGORIES
+            categories: CATEGORIES,
+            cartProduct: PRODUCTS
         }
+        this.AddToCart = this.AddToCart.bind(this)
     }
-
+    AddToCart(product) {
+        product.quantity += 1;
+        this.state.cartProduct.push(product);
+        this.setState({
+            cartProduct: this.state.cartProduct
+        });
+    }
 
     render() {
         const ProductsPage = () => {
             return (
-                <Products products={this.state.products} />
+                <Products products={this.state.products} onClick={this.AddToCart} />
             )
         }
         const CartPage = () => {
             return (
-                <Cart cartproduct={this.state.products} />
+                <Cart cartproduct={this.state.cartProduct} />
+            )
+        }
+
+        const SearchedProduct = ({ match }) => {
+            return (
+                <Products products={this.state.products.filter((product) => product.name.toLowerCase().includes(match.params.productName.toLowerCase()))} />
             )
         }
         return (
             <div className="body">
                 <Header />
                 <Switch>
-                    <Route path="/products" component={ProductsPage} />
+                    <Route exact path="/products" component={ProductsPage} />
+                    <Route path="/products/:productName" component={SearchedProduct} />
                     <Route exact path="/home" component={() => <Home deals={this.state.deals} categories={this.state.categories} products={this.state.products} />} />
                     <Route path='/contactus' component={() => <Contactus />} />
                     <Route path='/cart' component={CartPage} />

@@ -82,3 +82,15 @@ address{
 .borderOnHover:hover{
 border-color: $headerBackground;
 }
+.border{
+    border: black;
+}
+.borderMargin{
+    margin: 5px;
+}
+
+.content_center {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
