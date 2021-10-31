@@ -5,7 +5,8 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "/assets/images/product-1.png"
+        image: "/assets/images/product-1.png",
+        category: "Fruits"
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ export const PRODUCTS = [
         price: 10.5,
         discountedPrice: 10.5,
         discount: "0%",
-        image: "/assets/images/product-2.png"
+        image: "/assets/images/product-2.png",
+        category: "Vegitables"
     },
     {
         id: 3,
@@ -21,7 +23,8 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "/assets/images/product-3.png"
+        image: "/assets/images/product-3.png",
+        category: "Fruits"
     },
     {
         id: 4,
@@ -29,7 +32,8 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "/assets/images/product-4.png"
+        image: "/assets/images/product-4.png",
+        category: "Juice"
     },
     {
         id: 5,
@@ -37,7 +41,8 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "/assets/images/product-5.png"
+        image: "/assets/images/product-5.png",
+        category: "Fruits"
     },
     {
         id: 6,
@@ -45,7 +50,8 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "/assets/images/product-6.png"
+        image: "/assets/images/product-6.png",
+        category: "DryFruits"
     },
     {
         id: 7,
@@ -53,7 +59,8 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "/assets/images/product-7.png"
+        image: "/assets/images/product-7.png",
+        category: "Fruits"
     },
     {
         id: 8,
@@ -62,7 +69,8 @@ export const PRODUCTS = [
         discountedPrice: 10.5,
         discount: "33%",
         image: "/assets/images/product-8.png",
-        quantity: 1
+        quantity: 1,
+        category: ""
     },
     {
         id: 9,
@@ -72,7 +80,8 @@ export const PRODUCTS = [
         discountedPrice: 10.5,
         discount: "33%",
         image: "/assets/images/product-9.png",
-        quantity: 2
+        quantity: 2,
+        category: "vegitables"
     },
     {
         id: 1,
@@ -80,6 +89,7 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "/assets/images/product-1.png"
+        image: "/assets/images/product-1.png",
+        category: "Fruits"
     }
 ]

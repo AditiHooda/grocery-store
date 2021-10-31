@@ -116,11 +116,11 @@ class Cart extends Component {
                             <CardTitle>
                                 <div>
                                     <span className='col-6'>Sub Total:</span>
-                                    <span className='col-6 offset-6'> Rs. <span id='Total'>{this.Total}</span></span>
+                                    <span className='col-6 offset-4'> Rs. <span id='Total'>{this.Total}</span></span>
                                 </div>
                                 <div>
                                     <span className='col-6'>Delivery Charges:</span>
-                                    <span className='col-6 offset-4 p'> Rs. 19.7</span>
+                                    <span className='col-6 offset-2'> Rs. 19.7</span>
                                 </div>
                             </CardTitle>
                         </Card>

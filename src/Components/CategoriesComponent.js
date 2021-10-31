@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Card, CardBody, CardImg, CardText, CardTitle } from "reactstrap";
+import { Link } from "react-router-dom";
 
 class CategoriesComp extends Component {
     render() {
@@ -16,7 +17,7 @@ class CategoriesComp extends Component {
                         <CardImg src={category.img} height="150px">
                         </CardImg>
                         <CardBody className='text-center my-2'>
-                            <button type='button' className='btn btn-success'>Shop Now</button>
+                            <Link to={`/products/${category.name}`}><button type='button' className='btn btn-success'>Shop Now</button></Link>
                         </CardBody>
                     </Card>
                 return (

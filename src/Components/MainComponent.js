@@ -43,7 +43,8 @@ class Main extends Component {
 
         const SearchedProduct = ({ match }) => {
             return (
-                <Products products={this.state.products.filter((product) => product.name.toLowerCase().includes(match.params.productName.toLowerCase()))} />
+                <Products products={this.state.products.filter((product) => product.name.toLowerCase().includes(match.params.productName.toLowerCase()) ||
+                    product.category.toLowerCase() === (match.params.productName.toLowerCase()))} />
             )
         }
         return (
