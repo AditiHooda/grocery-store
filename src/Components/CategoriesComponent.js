@@ -6,7 +6,7 @@ class CategoriesComp extends Component {
         if (this.props.categories != null) {
             const categories = this.props.categories.map((category) => {
                 const categoryView =
-                    <Card>
+                    <Card className='borderOnHover'>
                         <CardTitle className='text-center my-2'>
                             <h3>{category.name}</h3>
                         </CardTitle>

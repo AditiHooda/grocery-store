@@ -5,7 +5,7 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "assets/images/product-1.png"
+        image: "/assets/images/product-1.png"
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export const PRODUCTS = [
         price: 10.5,
         discountedPrice: 10.5,
         discount: "0%",
-        image: "assets/images/product-2.png"
+        image: "/assets/images/product-2.png"
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "assets/images/product-3.png"
+        image: "/assets/images/product-3.png"
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "assets/images/product-4.png"
+        image: "/assets/images/product-4.png"
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "assets/images/product-5.png"
+        image: "/assets/images/product-5.png"
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "assets/images/product-6.png"
+        image: "/assets/images/product-6.png"
     },
     {
         id: 7,
@@ -53,7 +53,7 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "assets/images/product-7.png"
+        image: "/assets/images/product-7.png"
     },
     {
         id: 8,
@@ -61,7 +61,7 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "assets/images/product-8.png",
+        image: "/assets/images/product-8.png",
         quantity: 1
     },
     {
@@ -71,7 +71,7 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "assets/images/product-9.png",
+        image: "/assets/images/product-9.png",
         quantity: 2
     },
     {
@@ -80,6 +80,6 @@ export const PRODUCTS = [
         price: 13.2,
         discountedPrice: 10.5,
         discount: "33%",
-        image: "assets/images/product-1.png"
+        image: "/assets/images/product-1.png"
     }
 ]
