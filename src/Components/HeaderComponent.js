@@ -40,8 +40,8 @@ class Header extends Component {
                             </NavbarBrand>
                             <NavItem className='d-flex p-3'>
                                 <div className="btn-group search">
-                                    <input type="text" placeholder="Search for products" className="searchinput" id='searchInput' onChange={() => this.onChange()} />
-                                    <Link to={`/products/${this.state.searchText}`}><span className="fa fa-search fa-lg"></span></Link>
+                                    <input type="text" placeholder="Search for products" id='searchInput' onChange={() => this.onChange()} />
+                                    <Link to={`/products/${this.state.searchText}`}><span className="fa fa-search fa-lg m-2"></span></Link>
                                 </div>
                             </NavItem>
                         </Nav>

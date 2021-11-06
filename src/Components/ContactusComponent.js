@@ -11,9 +11,21 @@ class Contactus extends Component {
             email: '',
             message: ''
         }
+        this.handleInput = this.handleInput.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
-    handleSubmit() {
+    handleInput(event) {
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
 
+        this.setState({
+            [name]: value
+        });
+    }
+    handleSubmit(event) {
+        alert(JSON.stringify(this.state));
+        event.preventDefault();
     }
     render() {
         return (
@@ -31,12 +43,14 @@ class Contactus extends Component {
                                 <Col md={5}>
                                     <Input type='text' id='firstname' name='firstname'
                                         placeholder='First Name'
-                                        value={this.state.firstname} />
+                                        value={this.state.firstname}
+                                        onChange={this.handleInput} />
                                 </Col>
                                 <Col md={5}>
                                     <Input type='text' id='lastname' name='lastname'
                                         placeholder='Last Name'
-                                        value={this.state.lastname} />
+                                        value={this.state.lastname}
+                                        onChange={this.handleInput} />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -48,7 +62,8 @@ class Contactus extends Component {
                                 <Col md={8}>
                                     <Input type='tel' id='telnum' name='telnum'
                                         placeholder='Contact Tel.'
-                                        value={this.state.telnum} />
+                                        value={this.state.tel}
+                                        onChange={this.handleInput} />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -56,7 +71,8 @@ class Contactus extends Component {
                                 <Col md={10}>
                                     <Input type='tel' id='email' name='email'
                                         placeholder='Email'
-                                        value={this.state.email} />
+                                        value={this.state.email}
+                                        onChange={this.handleInput} />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -64,7 +80,8 @@ class Contactus extends Component {
                                 <Col md={10}>
                                     <Input type='textarea' id='message' name='message'
                                         rows='5'
-                                        value={this.state.message} />
+                                        value={this.state.message}
+                                        onChange={this.handleInput} />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>

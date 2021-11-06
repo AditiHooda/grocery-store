@@ -73,7 +73,7 @@ class Cart extends Component {
                                 </span>
                                 <span className='col-4'>
                                     <span id={product.id + '-discountedPrice'}>Rs. {product.discountedPrice * productQuantity}</span>
-                                    <div className='text-success'><small id={product.id + '-savedPrice'}> Saved Rs. {product.price * productQuantity - product.discountedPrice * productQuantity}</small></div>
+                                    <div className='text-success'><small id={product.id + '-savedPrice'}> Saved Rs. {(product.price * productQuantity - product.discountedPrice * productQuantity).toFixed(2)}</small></div>
                                 </span>
                                 <button type="button" className="btn btn-danger m-1" onClick={() => this.DeleteProduct(product)}>X</button>
                             </span>
@@ -116,11 +116,11 @@ class Cart extends Component {
                             <CardTitle>
                                 <div>
                                     <span className='col-6'>Sub Total:</span>
-                                    <span className='col-6 offset-4'> Rs. <span id='Total'>{this.Total}</span></span>
+                                    <span className='col-6 offset-4'> Rs. <span id='Total'>{(this.Total).toFixed(2)}</span></span>
                                 </div>
                                 <div>
                                     <span className='col-6'>Delivery Charges:</span>
-                                    <span className='col-6 offset-2'> Rs. 19.7</span>
+                                    <span className='col-6 offset-2'>Rs. 19.7</span>
                                 </div>
                             </CardTitle>
                         </Card>
