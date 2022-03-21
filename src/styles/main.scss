@@ -40,3 +40,7 @@ border-color: $headerBackground;
   justify-content: center;
   align-items: center; 
 }
+*::selection {
+    background: green;
+    color: #fff;
+}

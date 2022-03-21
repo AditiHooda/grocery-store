@@ -17,7 +17,7 @@ class Home extends Component {
                         <h2>Latest <span className="text-success">Products</span></h2>
                     </div>
                 </div>
-                <Products products={this.props.products} />
+                <Products products={this.props.products} onClick={this.onClick} />
                 <Contactus />
             </div>
         )

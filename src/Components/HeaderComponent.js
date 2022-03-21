@@ -33,7 +33,7 @@ class Header extends Component {
                 <Navbar dark expand="md" className="nav">
                     <div className="container">
                         <Nav navbar>
-                            <NavbarBrand className="mr-auto text-center" href="/home">
+                            <NavbarBrand className="mr-auto text-center" href="/">
                                 <h1>Groco</h1>
                                 {/* <img src="assets/images/logo.png" height='30' width='41'
                                 alt="Groco" /> */}

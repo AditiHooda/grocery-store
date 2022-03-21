@@ -6,6 +6,7 @@ export const PRODUCTS = [
         discountedPrice: 10.5,
         discount: "33%",
         image: "/assets/images/product-1.png",
+        quantity: 0,
         category: "Fruits"
     },
     {
@@ -15,6 +16,7 @@ export const PRODUCTS = [
         discountedPrice: 10.5,
         discount: "0%",
         image: "/assets/images/product-2.png",
+        quantity: 0,
         category: "Vegitables"
     },
     {
@@ -24,6 +26,7 @@ export const PRODUCTS = [
         discountedPrice: 10.5,
         discount: "33%",
         image: "/assets/images/product-3.png",
+        quantity: 0,
         category: "Fruits"
     },
     {
@@ -33,6 +36,7 @@ export const PRODUCTS = [
         discountedPrice: 10.5,
         discount: "33%",
         image: "/assets/images/product-4.png",
+        quantity: 0,
         category: "Juice"
     },
     {
@@ -42,6 +46,7 @@ export const PRODUCTS = [
         discountedPrice: 10.5,
         discount: "33%",
         image: "/assets/images/product-5.png",
+        quantity: 0,
         category: "Fruits"
     },
     {
@@ -51,6 +56,7 @@ export const PRODUCTS = [
         discountedPrice: 10.5,
         discount: "33%",
         image: "/assets/images/product-6.png",
+        quantity: 0,
         category: "DryFruits"
     },
     {
@@ -60,6 +66,7 @@ export const PRODUCTS = [
         discountedPrice: 10.5,
         discount: "33%",
         image: "/assets/images/product-7.png",
+        quantity: 0,
         category: "Fruits"
     },
     {
@@ -90,6 +97,7 @@ export const PRODUCTS = [
         discountedPrice: 10.5,
         discount: "33%",
         image: "/assets/images/product-1.png",
+        quantity: 0,
         category: "Fruits"
     }
 ]

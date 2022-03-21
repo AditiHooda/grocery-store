@@ -7,7 +7,7 @@ class Cart extends Component {
     AddProduct(product) {
         if (product) {
             product.quantity += 1;
-            this.Total += product.discountedPrice * product.quantity;
+            this.Total += product.discountedPrice;
             this.UpdateUI(product);
         }
     }
@@ -15,7 +15,7 @@ class Cart extends Component {
         if (product) {
             debugger;
             product.quantity -= 1;
-            this.Total -= product.discountedPrice * product.quantity;
+            this.Total -= product.discountedPrice;
             this.UpdateUI(product);
         }
 
@@ -28,10 +28,12 @@ class Cart extends Component {
             let discountedprice = document.getElementById(product.id + '-discountedPrice');
             let savedprice = document.getElementById(product.id + '-savedPrice');
             let quan = document.getElementById(product.id + '-quan');
+            let total = document.getElementById('Total');
             if (price) price.innerText = product.discountedPrice + " x " + product.quantity;
             if (discountedprice) discountedprice.innerText = 'Rs.' + product.discountedPrice * product.quantity;
-            if (savedprice) savedprice.innerText = "Saved Rs. " + (product.price * product.quantity - product.discountedPrice * product.quantity);
+            if (savedprice) savedprice.innerText = "Saved Rs. " + Math.round((product.price * product.quantity - product.discountedPrice * product.quantity), 4);
             if (quan) quan.innerText = product.quantity;
+            if (total) total.innerText = this.Total;
         }
         else {
             let withItems = document.getElementById(product.id + '-WithItem');

@@ -53,7 +53,7 @@ class Main extends Component {
                 <Switch>
                     <Route exact path="/products" component={ProductsPage} />
                     <Route path="/products/:productName" component={SearchedProduct} />
-                    <Route exact path="/home" component={() => <Home deals={this.state.deals} categories={this.state.categories} products={this.state.products} />} />
+                    <Route exact path="/" component={() => <Home deals={this.state.deals} categories={this.state.categories} products={this.state.products} onClick={this.AddToCart} />} />
                     <Route path='/contactus' component={() => <Contactus />} />
                     <Route path='/cart' component={CartPage} />
                 </Switch>

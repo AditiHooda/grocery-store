@@ -38,7 +38,7 @@ function Footer(props) {
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-auto">
-                        <p>© Copyright 2021 Groco- Grocery at home in a click</p>
+                        <p>Created By Gappu | All Rights Reserved! © Copyright 2021 Groco- Grocery at home in a click</p>
                     </div>
                 </div>
             </div>
