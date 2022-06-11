@@ -52,11 +52,11 @@ class Main extends Component {
                 <Header />
                 {/* Switch replaced to routes from react-router-dom v6 */}
                 <Routes>
-                    <Route exact path="/products" component={ProductsPage} />
-                    <Route path="/products/:productName" component={SearchedProduct} />
-                    <Route exact path="/" component={() => <Home deals={this.state.deals} categories={this.state.categories} products={this.state.products} onClick={this.AddToCart} />} />
-                    <Route path='/contactus' component={() => <Contactus />} />
-                    <Route path='/cart' component={CartPage} />
+                    <Route exact path="/products" element={ProductsPage} />
+                    <Route path="/products/:productName" element={SearchedProduct} />
+                    <Route exact path="/" element={<Home deals={this.state.deals} categories={this.state.categories} products={this.state.products} onClick={this.AddToCart} />} />
+                    <Route path='/contactus' element={<Contactus />} />
+                    <Route path='/cart' element={CartPage} />
                 </Routes>
                 <Footer />
             </div>
