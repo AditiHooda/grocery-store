@@ -30,16 +30,6 @@ class Main extends Component {
     }
 
     render() {
-        const ProductsPage = () => {
-            return (
-                <Products products={this.state.products} onClick={this.AddToCart} />
-            )
-        }
-        const CartPage = () => {
-            return (
-                <Cart cartproduct={this.state.cartProduct} />
-            )
-        }
 
         const SearchedProduct = ({ match }) => {
             return (
@@ -52,11 +42,11 @@ class Main extends Component {
                 <Header />
                 {/* Switch replaced to routes from react-router-dom v6 */}
                 <Routes>
-                    <Route exact path="/products" element={ProductsPage} />
+                    <Route exact path="/products" element={<Products products={this.state.products} onClick={this.AddToCart} />} />
                     <Route path="/products/:productName" element={SearchedProduct} />
                     <Route exact path="/" element={<Home deals={this.state.deals} categories={this.state.categories} products={this.state.products} onClick={this.AddToCart} />} />
                     <Route path='/contactus' element={<Contactus />} />
-                    <Route path='/cart' element={CartPage} />
+                    <Route path='/cart' element={<Cart cartproduct={this.state.cartProduct} />} />
                 </Routes>
                 <Footer />
             </div>
