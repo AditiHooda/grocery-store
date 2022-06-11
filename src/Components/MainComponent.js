@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Products from './ProductsComponent';
 import { PRODUCTS } from '../shared/products';
 import Home from './HomeComponent';
@@ -50,13 +50,14 @@ class Main extends Component {
         return (
             <div className="body">
                 <Header />
-                <Switch>
+                {/* Switch replaced to routes from react-router-dom v6 */}
+                <Routes>
                     <Route exact path="/products" component={ProductsPage} />
                     <Route path="/products/:productName" component={SearchedProduct} />
                     <Route exact path="/" component={() => <Home deals={this.state.deals} categories={this.state.categories} products={this.state.products} onClick={this.AddToCart} />} />
                     <Route path='/contactus' component={() => <Contactus />} />
                     <Route path='/cart' component={CartPage} />
-                </Switch>
+                </Routes>
                 <Footer />
             </div>
         );

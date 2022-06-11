@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardBlock, CardBody, CardImg, CardText, CardTitle } from "reactstrap";
+import { Card, CardBody, CardImg, CardText, CardTitle } from "reactstrap";
 
 class Products extends Component {
 
@@ -15,9 +15,12 @@ class Products extends Component {
                     <CardTitle className='text-center'>
                         {product.name}
                     </CardTitle>
-                    <CardBlock className='text-center'>
+                    <CardTitle className='text-center'>
                         {product.desc}
-                    </CardBlock>
+                    </CardTitle>
+                    {/* <CardBlock className='text-center'>
+                        {product.desc}
+                    </CardBlock> */}
                     <CardBody className='text-center productBody'>
                         <CardText>
                             <div>
